@@ -186,6 +186,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CatesController.cs" />
     <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\MapController.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handle\AboutHandle.cs" />
     <Compile Include="Handle\CatesHandle.cs" />
     <Compile Include="Handle\ContactHandle.cs" />
     <Compile Include="Handle\CurrencyHandle.cs" />
@@ -207,9 +209,10 @@
     <Compile Include="Handle\TourismHandle.cs" />
     <Compile Include="Handle\Util\DBHandle.cs" />
     <Compile Include="Handle\Util\ModelHandler.cs" />
-    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Handle\Util\TableListHandle.cs" />
     <Compile Include="Models\FeatureModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\TourismModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

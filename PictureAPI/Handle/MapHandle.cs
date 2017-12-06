@@ -35,8 +35,8 @@ namespace PictureAPI.Handle
             {
                 _handle = new DBHandle();
             }
-            string sql = @"SELECT c.Id id, c.City city,c.CityCode code, c.Lat lat,c.Lon lon FROM S_Citys c";
-            _handle.ExecuteQuery(sql);
+            string sql = @"SELECT c.Id id, c.City city,c.CityCode code, c.Lat lat,c.Lon lon FROM S_Citys c where c.CityCode like '%"+t+"%'";
+            dt = _handle.ExecuteQuery(sql);
             return dt;
         }
     }

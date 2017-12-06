@@ -8,6 +8,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using System.Data;
 using PictureAPI.Handle;
+using PictureAPI.Handle.Util;
 
 namespace PictureAPI.Controllers
 {
@@ -76,12 +77,13 @@ namespace PictureAPI.Controllers
                 responseModel.description = "请求数据成功！";
                 responseModel.success = true;
                 DataTable dt = _handle.GetSource(instate);
+                List<TourismModel> lsTourism = dt.DataTableToList<TourismModel>();
                 if (dt != null)
                 {
                     FeatureModel features = new FeatureModel();
                     features.displayFieldName = "name";
                     features.primaryFieldName = "id";
-                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dt));//(Contact[])ls.ToArray();
+                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(lsTourism));//(Contact[])ls.ToArray();
                     responseModel.response = features;
                 }
             }
