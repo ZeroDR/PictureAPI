@@ -8,13 +8,21 @@ using System.Data;
 using Newtonsoft.Json;
 using PictureAPI.Models;
 using PictureAPI.Handle;
+using PictureAPI.Handle.Util;
 
 namespace PictureAPI.Controllers
 {
+    /// <summary>
+    /// 名族Controller
+    /// </summary>
     public class NationsController : ApiController
     {
+        //操作对象
         private NationsHandle _handle = null;
 
+        /// <summary>
+        /// 构造函数并实例化操作对象
+        /// </summary>
         public NationsController()
         {
             if (_handle == null)
@@ -42,10 +50,11 @@ namespace PictureAPI.Controllers
                 DataTable dt = _handle.GetListFamily();
                 if (dt != null)
                 {
+                    List<FamilyModel> lsFamily = dt.DataTableToList<FamilyModel>();
                     FeatureModel features = new FeatureModel();
                     features.displayFieldName = "name";
                     features.primaryFieldName = "id";
-                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dt));//(Contact[])ls.ToArray();
+                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(lsFamily));//(Contact[])ls.ToArray();
                     responseModel.response = features;
                 }
             }

@@ -8,9 +8,13 @@ using System.Data;
 using Newtonsoft.Json;
 using PictureAPI.Models;
 using PictureAPI.Handle;
+using PictureAPI.Handle.Util;
 
 namespace PictureAPI.Controllers
 {
+    /// <summary>
+    /// 美食Controller
+    /// </summary>
     public class CatesController : ApiController
     {
         private CatesHandle _handle = null;
@@ -42,10 +46,11 @@ namespace PictureAPI.Controllers
                 DataTable dt = _handle.GetListCate();
                 if (dt != null)
                 {
+                    List<CateModel> lsCate = dt.DataTableToList<CateModel>();
                     FeatureModel features = new FeatureModel();
                     features.displayFieldName = "name";
                     features.primaryFieldName = "id";
-                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dt));//(Contact[])ls.ToArray();
+                    features.features = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(lsCate));//(Contact[])ls.ToArray();
                     responseModel.response = features;
                 }
             }

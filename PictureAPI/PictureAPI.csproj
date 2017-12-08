@@ -210,9 +210,17 @@
     <Compile Include="Handle\Util\DBHandle.cs" />
     <Compile Include="Handle\Util\ModelHandler.cs" />
     <Compile Include="Handle\Util\TableListHandle.cs" />
+    <Compile Include="Models\AboutModel.cs" />
+    <Compile Include="Models\AboutOthersModel.cs" />
+    <Compile Include="Models\CateModel.cs" />
+    <Compile Include="Models\CityModel.cs" />
+    <Compile Include="Models\DescriptionModel.cs" />
+    <Compile Include="Models\FamilyModel.cs" />
     <Compile Include="Models\FeatureModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\StateModule.cs" />
     <Compile Include="Models\TourismModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
