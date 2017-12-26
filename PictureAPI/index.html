@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoctorZH</title>
+    <style rel="stylesheet">
+        html, body, .container {
+            height: 100%;
+            width: 100%;
+            min-width:1200px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height:auto;
+            position: relative;
+        }
+
+        .s-header {
+            height: 120px;
+            width: 100%;
+            background: #333;
+            float: left;
+        }
+
+        .s-lan{
+            color: #fff;
+            display: block;
+            width: 80%;
+            font-size:16px;
+            line-height: 64px;
+            margin: auto;
+        }
+
+        .s-content {
+            margin: 0 10%;
+            height: 100%;
+            width: 80%;
+            background: #eee;
+            float: left;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            height: auto;
+            width: calc(25% - 12px);
+            margin:10px 0 10px 10px;
+            float:left;
+        }
+
+        li > div {
+            height: 240px;
+            width: 100%;
+            background: #fff;
+            margin:auto;
+            cursor: pointer;
+        }
+
+        li > div a{
+            display: block;
+            height:100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="s-header">
+        <div class="s-lan">有些事现在不做，一辈子都不会做！</div>
+    </div>
+    <div class="s-content">
+        <ul>
+            <li>
+                <div><a href="site/bone/index.html"></a></div>
+            </li>
+            <li>
+                <div><a href="site/doctor/index.html"></a></div>
+            </li>
+            <li>
+                <div><a href="site/picture/index.html"></a></div>
+            </li>
+            <li>
+                <div><a href="site/plotting/index.html"></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+	(function(){
+		window.location = 'http://www.doctorzh.com/site/picture/index.html#/asia';
+	})();
+</script>
+</body>
+</html>
