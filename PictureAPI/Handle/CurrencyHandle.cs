@@ -38,6 +38,10 @@ namespace PictureAPI.Handle
                 string sql = @"SELECT a.Id id,b.Name name,a.Title title,a.Description description FROM S_Description a join " + dtName + " b on a.Relation=b.Id where a.Type=" + moduleId + " and a.Relation=" + childId;
                 if (dtName != null)
                     dt = _handle.ExecuteQuery(sql);
+            }else
+            {
+                string sql = @"SELECT a.Id id,a.Title title,a.Description description FROM S_Description a where a.Type="+moduleId+" and a.Relation="+childId;
+                dt = _handle.ExecuteQuery(sql);
             }
             return dt;
         }
