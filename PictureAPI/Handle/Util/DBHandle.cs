@@ -38,5 +38,19 @@ namespace PictureAPI.Handle.Util
             }
             return dt;
         }
+
+        /// <summary>
+        /// 数据库执行增删改操作
+        /// </summary>
+        /// <returns></returns>
+        public int ExecuteSql(string sql)
+        {
+            int handCount = 0;
+            if(_handle != null)
+            {
+                handCount = _handle.ExecuteSql(sql);
+            }
+            return handCount;
+        }
     }
 }
